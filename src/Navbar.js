@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 const Navbar = ({ search, setSearch }) => {
   return (
     <nav className="navbar">
-      <h1>JMT 존맛탱</h1>
+      <h1>JMT ♡ 존맛탱</h1>
       <div className="links">
         <Link to="/">Home</Link>
-        <Link to="/">Categories</Link>
+        {/* <Link to="/">Categories</Link> */}
         <Link to="/recipe-generator">Recipe Generator</Link>
       </div>
       <form className="searchForm" onSubmit={(e) => e.preventDefault()}>
