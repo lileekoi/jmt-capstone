@@ -6,6 +6,7 @@ const Navbar = ({ search, setSearch }) => {
       <h1>JMT 존맛탱</h1>
       <div className="links">
         <Link to="/">Home</Link>
+        <Link to="/">Categories</Link>
         <Link to="/recipe-generator">Recipe Generator</Link>
       </div>
       <form className="searchForm" onSubmit={(e) => e.preventDefault()}>

@@ -4,6 +4,8 @@ import firebase from './firebase';
 import { BrowserRouter as Router, Route, Switch, useHistory } from 'react-router-dom';
 import { Fragment } from 'react';
 import RecipeGenerator from './RecipeGenerator';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 
 function App() {
   

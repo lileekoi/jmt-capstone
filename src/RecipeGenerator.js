@@ -30,21 +30,23 @@ class RecipeGenerator extends Component {
   }
 
   render() {
-    const { recipes } = this.state
-    console.log(recipes)
+    const { recipes } = this.state;
+    console.log(recipes);
+    const recipe = recipes.length ? recipes[0] : null;
+
     return (
       <div>
         <h1>Random Recipe Generator</h1>
         {
-          recipes.length ?
-          recipes.map(recipe => 
+          recipe ?
           <div key={recipe.id}>
             <h2>{recipe.title}</h2>
             <h3>Servings: {recipe.servings}</h3>
             <h3>Cook Time: {recipe.readyInMinutes} minutes</h3>
             <a href={recipe.sourceUrl}><button>Go To Recipe</button></a>
-            <h4>Instructions: {recipe.instructions}</h4>
-            </div>) :
+            <h4>Instructions: </h4>
+            <div dangerouslySetInnerHTML={{__html: recipe.instructions}} />
+            </div> :
           null
         }
       </div>

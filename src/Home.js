@@ -2,7 +2,6 @@ import React, { useState, useEffect, Fragment, useContext } from 'react';
 import firebase from './firebase';
 import { v4 as uuidv4 } from 'uuid';
 import RecipeList from "./RecipeList";
-import RecipeGenerator from "./RecipeGenerator"
 
 const Home = () => {
   // const [recipes, setRecipes] = useState([
@@ -45,7 +44,8 @@ const Home = () => {
 
   return (
     <div className="home">
-      <RecipeList recipes={recipes} name="All Recipes" />
+      <RecipeList recipes={recipes} name="Recipe Collection" />
+
     </div>
   );
 }
